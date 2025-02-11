@@ -216,6 +216,77 @@ body {
   cursor: default;
 }
 
+.side.three {
+  background: #eee;
+  height: 550px;
+  width: 400px;
+  padding: 10px;
+  transform: skew(10deg, -15deg);
+  background: linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
+}
+
+/* Ajustar la animación de la carta para incluir las nuevas páginas */
+#card {
+  display: flex;
+  visibility: hidden;
+}
+
+/* Ajustes para la animación al pasar entre páginas */
+#card.animate-page {
+  transform: rotateY(180deg); /* Gira la carta cuando se pasa a la siguiente página */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Modificar la animación de la carta al hacer clic */
+.side {
+  transform: skew(10deg, 20deg);
+  background: linear-gradient(90deg, #fff, #fff 40%, #ddd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #f9c8d1; /* Color suave y delicado */
+  color: #9b4d5e; /* Rosa elegante para el texto */
+  border: 2px solid #f9c8d1; /* Bordes del mismo color del fondo */
+  padding: 8px 12px; /* Tamaño de los botones */
+  font-size: 1.2em; /* Fuente más pequeña */
+  border-radius: 50px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Sacramento', cursive; /* Fuente elegante y cursiva */
+  position: absolute;
+  bottom: 10px; /* A 20px desde el fondo */
+  width: 50px; /* Ancho fijo */
+  height: 0px; /* Alto fijo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #9b4d5e; /* Cambio de color al pasar el ratón */
+  color: white; /* Color de texto blanco */
+  border: 2px solid #9b4d5e; /* Bordes con el mismo color al pasar el ratón */
+}
+
+button:active {
+  transform: scale(0.95); /* Efecto de presión al hacer clic */
+}
+
+button:first-of-type {
+  right: 80px; /* Colocar el botón de retroceso (⬅️) un poco más a la izquierda */
+}
+
+button:last-of-type {
+  right: 20px; /* Colocar el botón de siguiente (➡️) en la esquina derecha */
+}
+
+
+
+
 @keyframes pulseHeart {
   0% {
     transform: scale(1);
@@ -240,6 +311,6 @@ body {
   }
 
   .text {
-    font-size: 1em; /* Ajuste del tamaño de fuente */
+    font-size: 1.2em; /* Ajuste del tamaño de fuente */
   }
 }

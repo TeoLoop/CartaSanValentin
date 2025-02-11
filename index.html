@@ -7,6 +7,9 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+    
+
     <title>Feliz San Valentín Mi Amor</title>
 </head>
 
@@ -23,29 +26,47 @@
             <i class="fas fa-heart"></i>
         </div>
         <div class="side two">
-            <h2>🌷🌷🌷</h2>
-            <p>Querida Señorita Tottet,</p>
-            <p>
-                Feliz San Valentín, mi amor. No sé bien cómo empezar esto sin sonar medio cursi, pero qué le voy a hacer si con vos se me escapan las palabras lindas sin darme cuenta. Desde que estás en mi vida, todo tiene otro color, otra energía. No importa cómo venga el día, si sé que al final te voy a ver, ya vale la pena.
+            <div class="page" id="page1">
+                <h2>🌷🌷🌷</h2>
+                <p>Querida Señorita Tottet,</p>
+                <p>Feliz San Valentín, mi amor. No sé bien cómo empezar esto sin sonar medio cursi, pero qué le voy a hacer si con vos se me escapan las palabras lindas sin darme cuenta. Desde que estás en mi vida, todo tiene otro color, otra energía. No importa cómo venga el día, si sé que al final te voy a ver, ya vale la pena.</p>
+                <button onclick="nextPage(2)">➡</button>
+            </div>
+            <div class="page" id="page2" style="display:none;">
+                <h2>🌷🌷🌷</h2>
+                <p>Me encanta cuando te reís de mis boludeces, cuando me mirás con esos ojos que parecen decir todo sin decir nada. Y ni hablar de cuando te hacés la enojada… porque sí, te dura una eternidad. Pero qué le voy a hacer, si hasta enojada sos hermosa.
+                    Hoy es San Valentín, pero la verdad es que no necesito un día especial para decirte cuánto te amo...</p>
+                <button onclick="prevPage(1)">⬅</button>
+                <button onclick="nextPage(3)">➡</button>
+            </div>
+            <div class="page" id="page3" style="display:none;">
+                <h2>🌷🌷🌷</h2>
+                <p>Porque cada día con vos ya es especial. Sos mi lugar seguro, mi compañera, la que me hace reír hasta cuando no tengo ganas. Y no sé cómo hacés, pero cada día me gustás más.
 
-Me encanta cuando te reís de mis boludeces, cuando me mirás con esos ojos que parecen decir todo sin decir nada. Y ni hablar de cuando te hacés la enojada… porque sí, te dura una eternidad. Pero qué le voy a hacer, si hasta enojada sos linda.
-
-Hoy es San Valentín, pero la verdad es que no necesito un día especial para decirte cuánto te quiero. Porque cada día con vos ya es especial. Sos mi lugar seguro, mi compañera, la que me hace reír hasta cuando no tengo ganas. Y no sé cómo hacés, pero cada día me gustás más.
-
-Así que nada, solo quería escribirte esto para que te quede claro: sos lo mejor que me pasó y no pienso aflojarte nunca.
-            </p>
-            <p>
-                Feliz San Valentín, mi amor.
-            </p>
-            <p>
-                Te amo con todo,<br>
-                Yo (tu señorito tottet).
-            </p>
+                    Así que nada, solo quería escribirte esto para que te quede claro: sos lo mejor que me pasó y no pienso dejarte nunca.</p>
+                    <p>
+                        Feliz San Valentín, mi amor.
+                    </p>
+                    <p>
+                        Te amo con todo,<br>
+                        Mateo.
+                <button onclick="prevPage(2)">⬅</button>
+            </div>
         </div>
     </div>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        function nextPage(page) {
+            $('.page').hide();
+            $('#page' + page).show();
+        }
+        function prevPage(page) {
+            $('.page').hide();
+            $('#page' + page).show();
+        }
+    </script>
 </body>
 
 </html>

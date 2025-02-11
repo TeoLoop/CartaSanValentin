@@ -14,10 +14,18 @@ $(document).ready(function () {
             $('#card').css({ 'visibility': 'visible', 'opacity': 0, 'transform': 'scale(0.1)' });
             $('#card').animate({ 'opacity': 1 }, {
                 duration: 1000, step: function (now, fx) {
-                    var scale = 1 + Math.sin(now * Math.PI) * 0.1; // Calculamos la escala basada en la función seno
+                    var scale = 1 + Math.sin(now * Math.PI) * 0.1;
                     $(this).css('transform', 'scale(' + scale + ')');
                 }
             }); // Animación de ondulación
         });
     });
-}); 
+
+    // Cambiar entre páginas
+    $('.side').click(function () {
+        $('#card').toggleClass('animate-page');
+    });
+});
+
+
+
